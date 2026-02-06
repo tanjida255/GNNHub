@@ -1,3 +1,4 @@
+# GNNHub
 GNNHub aims to determine central hubs within a large protein-protein interaction network to further prioritize further downstream analyses.
 
 # How to run the code:
