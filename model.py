@@ -21,8 +21,8 @@ EXPRESSION_FILE = "exp.csv"
 PPI_FILE = "ppi.csv"
 PATHWAY_FILE = "pat.csv"
 OUTPUT_DIR = "results"
-TOP_N_TARGETS = 10
-RANDOM_SEED = 42
+TOP_N_TARGETS = 20
+RANDOM_SEED = 100
 np.random.seed(RANDOM_SEED)
 torch.manual_seed(RANDOM_SEED)
 
@@ -812,4 +812,5 @@ if __name__ == "__main__":
     print(f"Output directory: {OUTPUT_DIR}")
     print("================================")
     top_targets, model, G, per_fold_results, summary_df = identify_therapeutic_targets(EXPRESSION_FILE, PPI_FILE, PATHWAY_FILE, TOP_N_TARGETS, OUTPUT_DIR)
+
     print(f"\nAnalysis complete. Results saved to {OUTPUT_DIR} directory.")
